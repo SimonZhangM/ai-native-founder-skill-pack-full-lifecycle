@@ -1,162 +1,231 @@
-# AI Native Founder Skill Pack — Full Lifecycle Runtime Edition
+# AI Native Founder Skill Pack
 
-> A Codex-ready workflow pack for AI-native founders: **multi Skills + multi Agents + shared support + root AGENTS.md**. It turns the playbook into stage-gated startup execution from Idea → MVP → Launch → Scale.
+[中文说明](README_CN.md)
 
-This pack is intentionally **not** a book summary and not a generic startup advisor. It is a runnable project structure that lets Codex load reusable Skills, spawn focused custom Agents, and follow stable project-level rules.
+A Codex-ready workflow pack for founders building AI-native startups.
 
-## Why this edition uses 9 Skills, not 7
+This pack turns startup discussion into structured founder workflows: diagnose
+the current stage, identify the evidence gap, choose the right next action, and
+only then decide whether to validate, build, launch, automate, or scale.
 
-The 7-skill version is a good slim profile, but it under-represents the second half of the playbook. The book treats **Launch** and **Scale** as distinct lifecycle stages with their own exit criteria, risks, and operating workflows:
+## What This Pack Is For
 
-- Launch asks whether the business deserves to grow: repeatable/channel-driven growth, production hardening, security/compliance, product operations, and founder-bottleneck removal.
-- Scale asks whether the company can become durable: enterprise readiness, GTM motion, delegation, workflow lock-in, proprietary data loops, and defensible moat.
+AI tools make it easier to ship software, but that also makes it easier to build
+the wrong thing faster. This pack helps a founder keep the work stage-gated:
 
-So this default full-lifecycle edition keeps two dedicated stage Skills active:
+- Idea: prove the problem is real, specific, frequent, and painful.
+- MVP: test whether a focused solution creates repeat use, revenue, referral, or
+  strong qualitative pull.
+- Launch: harden PMF evidence, product operations, reliability, security, and
+  growth loops.
+- Scale: build enterprise readiness, delegation, GTM systems, data loops,
+  workflow lock-in, and defensible moat.
 
-```text
-launch-readiness
-scale-moat-system
-```
-
-If you want a minimal starter pack, you can still remove those two runtime Skills and the `scale_operator` agent. But for an OPC / AI-native founder workflow, keeping them is the stronger default.
-
-## Runtime-ready structure
-
-Open Codex from this folder and it can read the active runtime areas immediately:
-
-```text
-ai-native-founder-skill-pack-full-lifecycle/
-├─ AGENTS.md                         # active project rules for Codex
-├─ README.md
-├─ MANIFEST.md
-│
-├─ skills/                           # editable source Skills
-├─ agents/                           # editable source custom agents
-├─ shared/                           # shared references/templates/scripts
-├─ templates/                        # installable AGENTS.md and config template
-├─ docs/
-├─ examples/
-├─ assets/
-│
-├─ .agents/
-│  ├─ skills/                        # Codex-visible runtime Skills
-│  │  ├─ founder-stage-diagnosis/
-│  │  ├─ idea-validation/
-│  │  ├─ customer-discovery/
-│  │  ├─ mvp-scope/
-│  │  ├─ ai-coding-context/
-│  │  ├─ pmf-feedback-loop/
-│  │  ├─ founder-bottleneck-audit/
-│  │  ├─ launch-readiness/
-│  │  └─ scale-moat-system/
-│  └─ shared/                        # runtime shared support for Skills
-│
-└─ .codex/
-   ├─ config.toml
-   └─ agents/                        # Codex-visible custom agents
-      ├─ founder-orchestrator.toml
-      ├─ idea-validator.toml
-      ├─ mvp-architect.toml
-      ├─ launch-operator.toml
-      ├─ scale-operator.toml
-      └─ reviewer.toml
-```
-
-## Layer responsibilities
+The core rule is:
 
 ```text
-Current Codex thread = 主控层 / final coordinator
-Agents               = 角色层 / specialist operators
-Skills               = 方法层 / reusable workflows
-Shared               = references, templates, deterministic scripts
-AGENTS.md            = project-level rules and safety boundaries
+Do not build until evidence justifies it.
+Do not scale until operations can survive it.
+Do not automate judgment before the decision rule is explicit.
 ```
 
-## Skills
+## Who It Is For
+
+This pack is useful for:
+
+- Solo founders and small teams building AI-native products.
+- Founders using Codex, Claude Code, or other agentic coding tools.
+- Early operators who need repeatable workflows for validation, MVP planning,
+  PMF review, launch readiness, and scale preparation.
+- Technical founders who want a forcing function against scope creep and
+  premature building.
+- Non-technical founders who want AI agents to help structure the startup
+  process without replacing founder judgment.
+
+It is not meant to be a generic prompt collection, a fundraising guide, or a
+substitute for customer conversations.
+
+## Source And Inspiration
+
+This repository is inspired by Anthropic / Claude's official article
+[The founder's playbook: Building an AI-native startup](https://claude.com/blog/the-founders-playbook),
+published on May 14, 2026.
+
+That playbook reframes the startup lifecycle for AI-native companies across
+Idea, MVP, Launch, and Scale. This repository adapts that lifecycle into a
+Codex-ready runtime pack: project instructions, Skills, custom Agents, shared
+templates, deterministic scripts, and examples.
+
+This is an independent workflow pack. It is not an official Anthropic product.
+
+## Current Repository Structure
+
+This repository is packaged in Codex runtime form:
 
 ```text
-founder-stage-diagnosis   Diagnose Idea / MVP / Launch / Scale and gate readiness.
-idea-validation           Turn a vague idea into a testable hypothesis and adversarial validation plan.
-customer-discovery        Design interview targets, questions, probes, and synthesis.
-mvp-scope                 Define MVP boundaries and feature-amendment criteria.
-ai-coding-context         Generate AGENTS.md / CODEX.md style context, architecture notes, and session logs.
-pmf-feedback-loop         Define activation, retention, revenue/referral, false-positive checks, and PMF cadence.
-founder-bottleneck-audit  Identify workflows to stop, delegate, automate, or keep with founder judgment.
-launch-readiness          Audit PMF evidence, production readiness, technical debt, security/compliance, product ops, and growth.
-scale-moat-system         Audit enterprise readiness, GTM system, data flywheel, workflow lock-in, and defensible moat.
+.
+|-- AGENTS.md              # project rules Codex reads for this pack
+|-- README.md
+|-- README_CN.md
+|-- MANIFEST.md
+|-- .agents/
+|   |-- skills/            # Codex-visible runtime Skills
+|   `-- shared/            # shared references, templates, and scripts
+|-- .codex/
+|   |-- config.toml
+|   `-- agents/            # project-scoped Codex custom agents
+|-- docs/
+|-- examples/
+`-- assets/
 ```
 
-## Agents
+`AGENTS.md` is the durable project instruction file. It is not a custom agent.
+It tells Codex how this pack should operate: keep stage gates, separate evidence
+from assumptions, protect safety boundaries, and route work through the right
+founder workflow.
 
-```text
-founder_orchestrator  Stage diagnosis, routing, synthesis, final gate decision.
-idea_validator        Problem validation, customer discovery, competitor threats, disconfirming evidence.
-mvp_architect         MVP scope, architecture context, AI coding session plans, measurement guardrails.
-launch_operator       PMF evidence, launch readiness, product ops, growth channels, founder bottlenecks.
-scale_operator        Enterprise readiness, GTM system, delegation, data flywheel, workflow lock-in, moat narrative.
-reviewer              Adversarial check for missing evidence, false PMF, scope creep, stage mismatch, unsafe actions.
-```
+## How To Use It
 
-## Direct use
-
-From the pack root:
+Open Codex from the repository root:
 
 ```bash
 codex
 ```
 
-Then ask:
+Start with the coordinator:
 
 ```text
-List the AI Native Founder skills and custom agents you can see. Then summarize the AGENTS.md rules you loaded.
+Use founder_orchestrator to diagnose whether this startup is at Idea, MVP,
+Launch, or Scale. Separate evidence, assumptions, risks, and the next smallest
+action.
 ```
 
-## Install into another project
+A good founder intake prompt includes:
+
+```text
+Product idea:
+Target user and buyer:
+Current product state:
+Evidence gathered:
+Usage, retention, revenue, or referral data:
+Current bottleneck:
+Constraints:
+```
+
+The expected flow is:
+
+```text
+Current thread
+  -> founder_orchestrator for stage diagnosis and routing
+  -> specialist agent or Skill for focused work
+  -> reviewer for adversarial challenge when needed
+  -> current thread integrates the final decision
+```
+
+## Skills
+
+| Skill | Purpose |
+|---|---|
+| `founder-stage-diagnosis` | Diagnose the evidence-backed stage and gate readiness. |
+| `idea-validation` | Convert an idea into testable hypotheses and disconfirming evidence. |
+| `customer-discovery` | Design interview targets, questions, probes, and synthesis. |
+| `mvp-scope` | Define MVP boundaries, non-goals, and feature gates. |
+| `ai-coding-context` | Produce AI coding context, architecture notes, and session logs. |
+| `pmf-feedback-loop` | Interpret activation, retention, revenue, referral, and PMF signals. |
+| `founder-bottleneck-audit` | Identify work to stop, delegate, automate, or keep founder-led. |
+| `launch-readiness` | Audit PMF evidence, production readiness, security, ops, and growth. |
+| `scale-moat-system` | Assess enterprise readiness, GTM systems, data loops, lock-in, and moat. |
+
+## Agents
+
+| Agent | Use when |
+|---|---|
+| `founder_orchestrator` | You need stage diagnosis, routing, or final synthesis. |
+| `idea_validator` | You need problem validation, customer discovery, or competitor threats. |
+| `mvp_architect` | You need MVP scope, measurement guardrails, or coding-session context. |
+| `launch_operator` | You need PMF review, launch readiness, product ops, or growth channels. |
+| `scale_operator` | You need enterprise readiness, GTM systems, delegation, or moat analysis. |
+| `reviewer` | You need an adversarial check for weak evidence, false PMF, or stage mismatch. |
+
+## Common Prompts
+
+Idea validation:
+
+```text
+Use idea_validator to turn this idea into testable hypotheses, identify the
+strongest disconfirming evidence, and design a customer discovery script. Then
+use reviewer to challenge the result.
+```
+
+MVP planning:
+
+```text
+Use mvp_architect to define the MVP scope, explicit non-goals, acceptance
+criteria, measurement plan, and first AI coding session context. Do not write
+code yet.
+```
+
+PMF review:
+
+```text
+Use pmf-feedback-loop to evaluate these activation, retention, revenue,
+referral, and Sean Ellis signals. Call out false positives and missing evidence.
+```
+
+Launch readiness:
+
+```text
+Use launch_operator to audit PMF evidence, production readiness, technical debt,
+security/compliance, product operations, growth channels, and founder
+bottlenecks. Return PASS, HOLD, or REVIEW.
+```
+
+Scale and moat:
+
+```text
+Use scale_operator to audit enterprise readiness, GTM systems, delegation,
+workflow lock-in, proprietary data loops, and defensible moat. Use reviewer to
+challenge the moat narrative.
+```
+
+## Install Into Another Project
+
+Copy the runtime pack into the target repository:
 
 ```bash
 mkdir -p .agents .codex
-cp -R /path/to/ai-native-founder-skill-pack-full-lifecycle/skills .agents/skills
-cp -R /path/to/ai-native-founder-skill-pack-full-lifecycle/shared .agents/shared
-cp -R /path/to/ai-native-founder-skill-pack-full-lifecycle/agents .codex/agents
-cp /path/to/ai-native-founder-skill-pack-full-lifecycle/templates/AGENTS.md AGENTS.md
-cp /path/to/ai-native-founder-skill-pack-full-lifecycle/templates/config.example.toml .codex/config.toml
+cp -R /path/to/ai-native-founder-skill-pack-full-lifecycle/.agents/skills .agents/skills
+cp -R /path/to/ai-native-founder-skill-pack-full-lifecycle/.agents/shared .agents/shared
+cp -R /path/to/ai-native-founder-skill-pack-full-lifecycle/.codex/agents .codex/agents
+cp /path/to/ai-native-founder-skill-pack-full-lifecycle/.codex/config.toml .codex/config.toml
+cp /path/to/ai-native-founder-skill-pack-full-lifecycle/AGENTS.md AGENTS.md
 ```
 
-## Typical prompts
+Open a new Codex session from the target project after copying so the project
+rules, Skills, and Agents are visible.
+
+## Verify
+
+Ask Codex:
 
 ```text
-请用 founder_orchestrator 判断我现在处于 Idea / MVP / Launch / Scale 哪个阶段，并给出阶段门结论。
+List the AI Native Founder skills and custom agents you can see. Then summarize
+the AGENTS.md rules you loaded.
 ```
 
-```text
-请让 idea_validator agent 用 idea-validation 和 customer-discovery skills 处理这个想法，再让 reviewer agent 找反证，最后汇总是否值得进入 MVP。
-```
-
-```text
-请用 mvp_architect agent 生成 MVP scope、AI coding context、session log 模板。不要写代码，先给我边界和验收标准。
-```
-
-```text
-请用 launch_operator agent 做 launch-readiness 审计：PMF 证据、技术债、安全合规、产品管理流程、增长渠道和创始人瓶颈。
-```
-
-```text
-请用 scale_operator agent 做 scale-moat-system 审计：企业级 readiness、GTM、数据飞轮、workflow lock-in 和护城河叙事。
-```
-
-## Operating principle
-
-```text
-Do not build until evidence justifies it.
-Do not scale until operations can survive it.
-Do not automate judgment before the judgment is explicit.
-```
-
-## Smoke tests
+Run the deterministic helper scripts:
 
 ```bash
-python shared/scripts/stage_gate_check.py examples/sample-evidence.json
-python shared/scripts/pmf_signal_score.py examples/sample-pmf-metrics.json
+python .agents/shared/scripts/stage_gate_check.py examples/sample-evidence.json
+python .agents/shared/scripts/pmf_signal_score.py examples/sample-pmf-metrics.json
 ```
 
-Expected: both scripts print JSON plus a short human-readable summary.
+Expected result: both commands print structured output and a short summary.
+
+## Documentation
+
+- `docs/agent-skill-map.md` explains how agents and skills fit together.
+- `docs/design-principles.md` documents the operating principles behind the pack.
+- `docs/installation.md` covers installation shapes and runtime details.
+- `docs/usage-examples.md` provides example prompts for common founder workflows.
+- `examples/` contains sample stage outputs and JSON inputs for the helper scripts.

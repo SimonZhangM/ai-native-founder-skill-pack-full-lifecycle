@@ -60,6 +60,7 @@ This manifest includes both editable source files and Codex-visible runtime mirr
 - `AGENTS.md`
 - `MANIFEST.md`
 - `README.md`
+- `README_CN.md`
 - `agents/founder-orchestrator.toml`
 - `agents/idea-validator.toml`
 - `agents/launch-operator.toml`
