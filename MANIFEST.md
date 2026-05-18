@@ -1,0 +1,124 @@
+# MANIFEST — AI Native Founder Skill Pack Full Lifecycle
+
+This manifest includes both editable source files and Codex-visible runtime mirrors.
+
+## Runtime profile
+
+- Skills: 9
+- Agents: 6
+- Root AGENTS.md: yes
+- Runtime shared support: yes
+
+## Files
+
+- `.agents/README.md`
+- `.agents/shared/references/agent-collaboration-protocol.md`
+- `.agents/shared/references/decision-rules.md`
+- `.agents/shared/references/launch-and-scale-ops.md`
+- `.agents/shared/references/lifecycle-stage-gates.md`
+- `.agents/shared/references/mvp-build-guardrails.md`
+- `.agents/shared/references/validation-and-research.md`
+- `.agents/shared/scripts/pmf_signal_score.py`
+- `.agents/shared/scripts/stage_gate_check.py`
+- `.agents/shared/templates/agent-handoff.md`
+- `.agents/shared/templates/architecture-context.md`
+- `.agents/shared/templates/build-session-log.md`
+- `.agents/shared/templates/customer-discovery-script.md`
+- `.agents/shared/templates/founder-intake.md`
+- `.agents/shared/templates/idea-stage-brief.md`
+- `.agents/shared/templates/launch-readiness-report.md`
+- `.agents/shared/templates/mvp-scope.md`
+- `.agents/shared/templates/pmf-feedback-brief.md`
+- `.agents/shared/templates/scale-bottleneck-map.md`
+- `.agents/shared/templates/scale-moat-map.md`
+- `.agents/skills/ai-coding-context/SKILL.md`
+- `.agents/skills/ai-coding-context/examples/example-prompts.md`
+- `.agents/skills/customer-discovery/SKILL.md`
+- `.agents/skills/customer-discovery/examples/example-prompts.md`
+- `.agents/skills/founder-bottleneck-audit/SKILL.md`
+- `.agents/skills/founder-bottleneck-audit/examples/example-prompts.md`
+- `.agents/skills/founder-stage-diagnosis/SKILL.md`
+- `.agents/skills/founder-stage-diagnosis/examples/example-prompts.md`
+- `.agents/skills/idea-validation/SKILL.md`
+- `.agents/skills/idea-validation/examples/example-prompts.md`
+- `.agents/skills/launch-readiness/SKILL.md`
+- `.agents/skills/launch-readiness/examples/example-prompts.md`
+- `.agents/skills/mvp-scope/SKILL.md`
+- `.agents/skills/mvp-scope/examples/example-prompts.md`
+- `.agents/skills/pmf-feedback-loop/SKILL.md`
+- `.agents/skills/pmf-feedback-loop/examples/example-prompts.md`
+- `.agents/skills/scale-moat-system/SKILL.md`
+- `.agents/skills/scale-moat-system/examples/example-prompts.md`
+- `.codex/README.md`
+- `.codex/agents/founder-orchestrator.toml`
+- `.codex/agents/idea-validator.toml`
+- `.codex/agents/launch-operator.toml`
+- `.codex/agents/mvp-architect.toml`
+- `.codex/agents/reviewer.toml`
+- `.codex/agents/scale-operator.toml`
+- `.codex/config.toml`
+- `AGENTS.md`
+- `MANIFEST.md`
+- `README.md`
+- `agents/founder-orchestrator.toml`
+- `agents/idea-validator.toml`
+- `agents/launch-operator.toml`
+- `agents/mvp-architect.toml`
+- `agents/reviewer.toml`
+- `agents/scale-operator.toml`
+- `assets/architecture-map.svg`
+- `assets/stage-gates.svg`
+- `docs/agent-skill-map.md`
+- `docs/architecture-map.md`
+- `docs/design-principles.md`
+- `docs/installation.md`
+- `docs/runtime-slim-profile.md`
+- `docs/skill-selection-rationale.md`
+- `docs/structure-and-agents-md.md`
+- `docs/usage-examples.md`
+- `examples/example-prompts.md`
+- `examples/idea-stage-example.md`
+- `examples/launch-stage-example.md`
+- `examples/mvp-stage-example.md`
+- `examples/sample-evidence.json`
+- `examples/sample-pmf-metrics.json`
+- `examples/scale-stage-example.md`
+- `shared/references/agent-collaboration-protocol.md`
+- `shared/references/decision-rules.md`
+- `shared/references/launch-and-scale-ops.md`
+- `shared/references/lifecycle-stage-gates.md`
+- `shared/references/mvp-build-guardrails.md`
+- `shared/references/validation-and-research.md`
+- `shared/scripts/pmf_signal_score.py`
+- `shared/scripts/stage_gate_check.py`
+- `shared/templates/agent-handoff.md`
+- `shared/templates/architecture-context.md`
+- `shared/templates/build-session-log.md`
+- `shared/templates/customer-discovery-script.md`
+- `shared/templates/founder-intake.md`
+- `shared/templates/idea-stage-brief.md`
+- `shared/templates/launch-readiness-report.md`
+- `shared/templates/mvp-scope.md`
+- `shared/templates/pmf-feedback-brief.md`
+- `shared/templates/scale-bottleneck-map.md`
+- `shared/templates/scale-moat-map.md`
+- `skills/ai-coding-context/SKILL.md`
+- `skills/ai-coding-context/examples/example-prompts.md`
+- `skills/customer-discovery/SKILL.md`
+- `skills/customer-discovery/examples/example-prompts.md`
+- `skills/founder-bottleneck-audit/SKILL.md`
+- `skills/founder-bottleneck-audit/examples/example-prompts.md`
+- `skills/founder-stage-diagnosis/SKILL.md`
+- `skills/founder-stage-diagnosis/examples/example-prompts.md`
+- `skills/idea-validation/SKILL.md`
+- `skills/idea-validation/examples/example-prompts.md`
+- `skills/launch-readiness/SKILL.md`
+- `skills/launch-readiness/examples/example-prompts.md`
+- `skills/mvp-scope/SKILL.md`
+- `skills/mvp-scope/examples/example-prompts.md`
+- `skills/pmf-feedback-loop/SKILL.md`
+- `skills/pmf-feedback-loop/examples/example-prompts.md`
+- `skills/scale-moat-system/SKILL.md`
+- `skills/scale-moat-system/examples/example-prompts.md`
+- `templates/AGENTS.md`
+- `templates/config.example.toml`

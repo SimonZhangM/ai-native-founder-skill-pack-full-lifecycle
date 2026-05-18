@@ -1,0 +1,23 @@
+# Codex config example for AI Native Founder Skill Pack.
+# Copy to .codex/config.toml for a project-scoped setup, or ~/.codex/config.toml for global setup.
+
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+# The current Codex config schema parses [agents] as named agent-role definitions.
+# Keeping integer settings here makes startup fail with:
+# "invalid type: integer '32768', expected struct AgentRoleToml in 'agents'".
+# Agent role files remain under .codex/agents/*.toml.
+#
+# [agents]
+# max_threads = 6
+# max_depth = 1
+# job_max_runtime_seconds = 1800
+#
+# Keep project instructions compact unless you intentionally need more.
+# project_doc_max_bytes = 32768
+
+# Optional: use this only if your repository has additional instruction filenames.
+# project_doc_fallback_filenames = ["TEAM_GUIDE.md", ".agents.md"]

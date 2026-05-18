@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-label="AI Native Founder Skill Pack architecture map">
+  <defs>
+    <style>
+      .title { font: 700 30px Inter, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 15px Inter, Arial, sans-serif; fill: #4b5563; }
+      .box { fill: #ffffff; stroke: #111827; stroke-width: 2; rx: 18; }
+      .soft { fill: #f9fafb; stroke: #d1d5db; stroke-width: 2; rx: 16; }
+      .label { font: 700 17px Inter, Arial, sans-serif; fill: #111827; }
+      .small { font: 400 13px Inter, Arial, sans-serif; fill: #374151; }
+      .arrow { stroke: #111827; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#111827" />
+    </marker>
+  </defs>
+  <rect width="1120" height="680" fill="#f3f4f6" />
+  <text x="60" y="70" class="title">AI Native Founder Skill Pack</text>
+  <text x="60" y="100" class="subtitle">Skills carry reusable methods. Agents carry roles. AGENTS.md carries durable project rules.</text>
+
+  <rect x="60" y="145" width="1000" height="88" class="box" />
+  <text x="90" y="180" class="label">Current Codex Thread</text>
+  <text x="90" y="205" class="small">Parent coordinator: decides stage, calls agents, integrates results, protects safety boundaries.</text>
+
+  <rect x="60" y="290" width="290" height="230" class="soft" />
+  <text x="90" y="325" class="label">Agents / Role Layer</text>
+  <text x="90" y="355" class="small">founder_orchestrator</text>
+  <text x="90" y="380" class="small">idea_validator</text>
+  <text x="90" y="405" class="small">mvp_architect</text>
+  <text x="90" y="430" class="small">launch_operator</text>
+  <text x="90" y="455" class="small">scale_operator</text>
+  <text x="90" y="480" class="small">reviewer</text>
+
+  <rect x="410" y="290" width="330" height="230" class="soft" />
+  <text x="440" y="325" class="label">Skills / Method Layer</text>
+  <text x="440" y="355" class="small">stage diagnosis · idea validation</text>
+  <text x="440" y="380" class="small">customer discovery · MVP scope</text>
+  <text x="440" y="405" class="small">AI coding context · PMF loop</text>
+  <text x="440" y="430" class="small">founder bottleneck audit</text>
+  <text x="440" y="455" class="small">launch readiness · scale moat</text>
+  <text x="440" y="480" class="small">each skill has trigger, workflow, outputs, boundaries</text>
+
+  <rect x="800" y="290" width="260" height="230" class="soft" />
+  <text x="830" y="325" class="label">Shared Support</text>
+  <text x="830" y="355" class="small">references/ stage gates</text>
+  <text x="830" y="380" class="small">templates/ stable outputs</text>
+  <text x="830" y="405" class="small">scripts/ deterministic checks</text>
+  <text x="830" y="430" class="small">examples/ prompt patterns</text>
+  <text x="830" y="455" class="small">assets/ visual maps</text>
+
+  <rect x="60" y="575" width="1000" height="65" class="box" />
+  <text x="90" y="613" class="label">AGENTS.md</text>
+  <text x="205" y="613" class="small">Project-level working agreements: no unsafe writes, use stage gates, report evidence, keep agents narrow.</text>
+
+  <path d="M560 233 L560 276" class="arrow" />
+  <path d="M350 405 L397 405" class="arrow" />
+  <path d="M740 405 L785 405" class="arrow" />
+  <path d="M560 520 L560 565" class="arrow" />
+</svg>
