@@ -1,5 +1,12 @@
 # .agents Runtime Directory
 
-Codex scans repository Skills from `.agents/skills/`. This directory also includes `.agents/shared/` so runtime Skills can resolve shared references, templates, and scripts.
+Codex scans repository Skills from `.agents/skills/`.
 
-Default full lifecycle profile: 9 Skills.
+In the root legion runtime, integrated skills are namespaced:
+
+```text
+.agents/skills/no1-*
+.agents/shared/no1/
+```
+
+Current profile: 9 no1 Skills.

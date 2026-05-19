@@ -1,0 +1,13 @@
+{
+  "stage": "idea",
+  "evidence": {
+    "target_user": "Finance managers at mid-market companies",
+    "problem_specific": true,
+    "frequency_defined": true,
+    "severity_defined": true,
+    "current_workaround": "Manual reconciliation across expense exports and accounting records",
+    "real_conversations": 7,
+    "solution_addresses_validated_problem": true,
+    "disconfirming_evidence_reviewed": true
+  }
+}

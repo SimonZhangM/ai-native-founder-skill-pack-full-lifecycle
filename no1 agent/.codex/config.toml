@@ -1,4 +1,4 @@
-# Codex config example for OPC Agent Legion Runtime.
+# Codex config example for AI Native Founder Skill Pack.
 # Copy to .codex/config.toml for a project-scoped setup, or ~/.codex/config.toml for global setup.
 
 model = "gpt-5.5"
